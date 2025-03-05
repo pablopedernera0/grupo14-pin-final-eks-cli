@@ -9,7 +9,7 @@ module "eks" {
   subnet_ids = module.vpc.private_subnets
 
   eks_managed_node_groups = {
-    grupo14-eks-cluster-node-group = {
+    grupo14-ng = {
       ami = data.aws_ami.ubuntu.id
       instance_types = ["t2.micro"]
     }
