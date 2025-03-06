@@ -10,8 +10,10 @@ module "eks" {
 
   eks_managed_node_groups = {
     grupo14-ng = {
-      ami = data.aws_ami.ubuntu.id
-      instance_types = ["t2.micro"]
+       instance_types = ["t3.medium"]
+      min_size       = 1
+      max_size       = 2
+      desired_size   = 1
     }
   }
 
